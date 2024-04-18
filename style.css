@@ -1,0 +1,438 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-family: "Roboto", sans-serif;
+}
+li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+
+.header {
+    background: whitesmoke;
+    color: blue;
+    position: relative;
+    z-index: 2;
+}
+.navbar {
+    max-width: 1248px;
+    padding: 0 24px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 72px;
+}
+.navbar h1 a,
+.navbar ul li a {
+    color: black;
+}
+.navbar ul {
+    display: flex;
+}
+.navbar ul li a {
+    padding: 0 16px;
+    transition: all 0.2s ease-in-out;
+}
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    color: blue;
+}
+/* Hamburger Menu*/
+#navcheck,
+.nav-btn,
+.backdrop {
+    display: none;
+}
+.nav-btn {
+    position: fixed;
+    right: 24px;
+    top: 26px;
+    z-index: 99;
+}
+.nav-btn label span {
+    display: block;
+    width: 30px;
+    height: 1.5px;
+    background: black;
+    border-radius: 3px;
+    transition: background-color 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.3s ease-in-out,
+        -webkit-transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+    -webkit-transition: background-color 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.3s ease-in-out,
+        -webkit-transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), background-color 0.3s cubic-bezier(0.77, 0.2, 0.05, 1),
+        opacity 0.3s ease-in-out;
+    transition: transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1), background-color 0.3s cubic-bezier(0.77, 0.2, 0.05, 1),
+        opacity 0.3s ease-in-out, -webkit-transform 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+    position: relative;
+}
+.nav-btn label span:not(:last-child) {
+    margin-bottom: 7px;
+}
+
+@media (max-width: 992px) {
+    .nav-menu {
+        display: none !important;
+    }
+    .nav-btn {
+        display: block;
+    }
+    .navbar ul li a {
+        color: #303030;
+        width: 100%;
+        display: block;
+        padding: 16px;
+    }
+    #navcheck {
+        opacity: 0;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 72px;
+        height: 72px;
+        z-index: 999;
+        cursor: pointer;
+        margin: 0;
+        display: block;
+    }
+    input#navcheck:checked ~ .nav-btn label span:first-child {
+        -webkit-transform: rotate(45deg) translate(6px, 6px);
+        transform: rotate(45deg) translate(6px, 6px);
+        top: 0;
+        left: 0;
+    }
+    input#navcheck:checked ~ .nav-btn label span:last-child {
+        -webkit-transform: rotate(-45deg) translate(6px, -6px);
+        transform: rotate(-45deg) translate(6px, -6px);
+        top: 0;
+        left: 0;
+    }
+    input#navcheck:checked ~ .nav-btn label span:nth-child(2) {
+        opacity: 0;
+    }
+    input#navcheck:checked ~ .header .navbar .nav-menu {
+        display: block !important;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background-color: #fff;
+    }
+    input#navcheck:checked ~ .backdrop {
+        position: absolute;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.36);
+        width: 100%;
+        height: calc(100% - 72px);
+        z-index: 1;
+    }
+}
+
+/* logo */
+
+#logob{
+    color: #007bff;
+}
+
+/* after nav-bar */
+
+
+/* section one  */
+
+
+.container-one {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(218, 239, 245);
+    padding-bottom: 75px;
+}
+
+
+.container-one div{
+    width: 600px;
+    margin: 10px;
+}
+
+  .navbar-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+
+  /* insice first section */
+
+.inside-one{
+    text-align: left;
+    justify-content: center;
+}
+.inside-one {
+    padding: 20px; 
+}
+
+.inside-one h2 {
+    margin-bottom: 10px; 
+}
+
+.inside-one p {
+    margin-bottom: 20px; 
+}
+
+.inside-one a {
+    display: block;
+    margin-top: 20px;
+}
+
+.inside-two img{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 75%;
+}
+
+
+/* second section  */
+
+.container-one-clone {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    padding-bottom: 75px;
+}
+
+.container-one-clone div{
+    width: 500px;
+}
+.container-one-clone div img{
+    width: 75%;
+}
+
+.row {
+    display: flex;
+    justify-content: space-around; /* Adjust as needed */
+}
+
+.icon i{
+    text-align: center;
+    color: #007bff;
+}
+
+.inside-two-clone img{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 100%;
+}
+
+.inside-one-clone h2{
+    margin-bottom: 30px;
+    text-align: start;
+}
+.inside-one-clone p{
+    margin-bottom: 10px;
+}
+
+
+/* section three */
+
+.container-second{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(218, 239, 245);
+    padding-top: 75px;
+} 
+
+
+.inside-second{
+    width: 100%;
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.inside-box{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(218, 239, 245);
+    padding-bottom: 75px;
+}
+
+.inside-box div{
+    width: 280px;
+    margin: 10px;
+}
+
+/* also for section six  */
+
+.container-five{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-attachment: white;
+}
+
+.container-five div{
+    width: 350px;
+    margin: 10px;
+}
+
+.container-five div i{
+    color: #007bff;
+}
+
+.pinky{
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    
+}
+
+.six-path{
+    background-color: rgb(218, 239, 245);
+}
+
+
+/* section seven */
+
+.btn-white{
+    background-color:#ffffff ;
+    color: #007bff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.container-seven{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(48,164,213);
+}
+
+.container-seven div{
+    width: 600px;
+    color: #ffffff;
+    height: 100px;
+}
+
+.container-seven div button{
+   margin-top: 20px;
+}
+
+.container-seven div h1{
+    margin-top: 5px;
+}
+
+/* section eight  */
+
+
+.container-eight{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: #ffffff;
+    padding-top: 75px;
+} 
+
+.container-eight div{
+    width: 500px;
+}
+
+.container-eight img{
+    border-radius: 50%;
+}
+
+
+/* section nine */
+
+
+
+.container-nine{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(218, 239, 245);
+    padding-top: 75px;
+} 
+
+.container-nine .inside-nine{
+    width: 274px;
+    margin: 10px;
+}
+
+.container-nine .inside-nine-two {
+    width: 274px;
+    height: 80px;
+    background-color: #ffffff;
+}
+.nine{
+    background-color: rgb(218, 239, 245);
+}
+
+
+.pinky-two{
+    text-align: center;   
+}
+
+.row-one {
+    display: flex;
+    justify-content: space-around; 
+
+}
+
+/* footer or section ten  */
+
+.icon-one i{
+    text-align: center;
+    color: white;
+}
+
+
+.container-ten{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    background-color: rgb(17,49,64);
+    padding-top: 75px;
+    color: white;
+} 
+
+.container-ten .inside-ten-one{
+        width: 280px;
+        margin: 10px;
+}
+
+.container-ten .inside-ten-two{
+    width: 280px;
+    margin: 10px;
+}
